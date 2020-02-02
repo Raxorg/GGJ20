@@ -1,14 +1,22 @@
 package com.frontanilla.ggj20;
 
-class Stuff {
+import com.frontanilla.ggj20.stuff.HealthBar;
+import com.frontanilla.ggj20.stuff.Player;
+
+public class Stuff {
 
     private Assets assets;
     // Stuff
     private Player player;
+    private HealthBar healthBar;
 
     void init() {
         player = new Player();
-        player.setTexture(assets.getArmL());
+        player.setTexture(assets.getIndigena());
+
+        healthBar = new HealthBar();
+        healthBar.setFrame(null);
+        healthBar.setHealth(null);
     }
 
     void setAssets(Assets assets) {
@@ -17,7 +25,11 @@ class Stuff {
 
     // Stuff getters
 
-    Player getPlayer() {
+    public Player getPlayer() {
         return player;
+    }
+
+    public HealthBar getHealthBar() {
+        return healthBar;
     }
 }

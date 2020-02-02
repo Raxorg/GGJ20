@@ -1,13 +1,16 @@
-package com.frontanilla.ggj20;
+package com.frontanilla.ggj20.logic;
 
 import com.badlogic.gdx.math.Rectangle;
+import com.frontanilla.ggj20.Input;
+import com.frontanilla.ggj20.stuff.Player;
+import com.frontanilla.ggj20.Stuff;
 
-class Movement {
+public class Movement {
 
     private Input input;
     private Stuff stuff;
 
-    void update(float delta) {
+    public void update(float delta) {
         input.checkKeys();
 
         Player player = stuff.getPlayer();
@@ -24,23 +27,23 @@ class Movement {
         }
     }
 
-    void move(float x, float y) {
+    public void move(float x, float y) {
         Rectangle rectangle = stuff.getPlayer().getBounds();
         rectangle.x += x;
         rectangle.y += y;
     }
 
-    void spacePressed() {
+    public void spacePressed() {
         if (stuff.getPlayer().getBounds().y == 0f) {
             stuff.getPlayer().getVelocity().y = 1000f;
         }
     }
 
-    void setInput(Input input) {
+    public void setInput(Input input) {
         this.input = input;
     }
 
-    void setStuff(Stuff stuff) {
+    public void setStuff(Stuff stuff) {
         this.stuff = stuff;
     }
 }

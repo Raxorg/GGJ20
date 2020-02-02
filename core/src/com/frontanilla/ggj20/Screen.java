@@ -28,12 +28,21 @@ public class Screen extends ScreenAdapter {
 
         batch.begin();
 
+        drawPlayer();
+        drawHealthBar();
+
+        batch.end();
+    }
+
+    private void drawPlayer() {
         batch.draw(
                 stuff.getPlayer().getTexture(),
                 stuff.getPlayer().getBounds().x,
                 stuff.getPlayer().getBounds().y);
+    }
 
-        batch.end();
+    private void drawHealthBar() {
+        batch.draw(stuff.getHealthBar().getFrame(), 0, 0);
     }
 
     void setLogic(Logic logic) {

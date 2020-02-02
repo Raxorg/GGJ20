@@ -1,35 +1,33 @@
-package com.frontanilla.ggj20;
+package com.frontanilla.ggj20.stuff;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
-import java.util.ArrayList;
-
-class Player {
+public class Player {
 
     private Texture texture;
     private Rectangle bounds;
     private Vector2 velocity;
 
-    Player() {
+    public Player() {
         bounds = new Rectangle();
         velocity = new Vector2();
     }
 
-    Texture getTexture() {
+    public Texture getTexture() {
         return texture;
     }
 
-    void setTexture(Texture texture) {
+    public void setTexture(Texture texture) {
         this.texture = texture;
     }
 
-    Rectangle getBounds() {
+    public Rectangle getBounds() {
         return bounds;
     }
 
-    Vector2 getVelocity() {
+    public Vector2 getVelocity() {
         return velocity;
     }
 }
