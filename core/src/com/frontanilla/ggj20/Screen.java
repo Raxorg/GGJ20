@@ -49,10 +49,11 @@ public class Screen extends ScreenAdapter {
     }
 
     private void drawPlayer() {
+        Rectangle bounds = stuff.getPlayer().getBounds();
         batch.draw(
                 stuff.getPlayer().getTexture(),
-                stuff.getPlayer().getBounds().x,
-                stuff.getPlayer().getBounds().y);
+                bounds.x, bounds.y,
+                bounds.width, bounds.height);
     }
 
     private void drawHealthBar() {

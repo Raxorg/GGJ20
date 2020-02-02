@@ -19,7 +19,8 @@ public class Stuff {
 
     void init() {
         player = new Player();
-        player.setTexture(assets.getIndigena());
+        player.setTexture(assets.getIndigena()); // TODO: Get Player Male
+        player.getBounds().setSize(121f / 2f, 416f / 2f);
 
         healthBar = new HealthBar();
         healthBar.setTexture(assets.getIndigena()); // TODO: Get health
