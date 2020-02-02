@@ -4,7 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputAdapter;
 
-public class MyInput extends InputAdapter {
+public class Input extends InputAdapter {
 
     private Logic logic;
 
@@ -22,7 +22,7 @@ public class MyInput extends InputAdapter {
         }
     }
 
-    public void setLogic(Logic logic) {
+    void setLogic(Logic logic) {
         this.logic = logic;
     }
 }

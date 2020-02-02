@@ -36,7 +36,7 @@ public class Screen extends ScreenAdapter {
         batch.end();
     }
 
-    public void setLogic(Logic logic) {
+    void setLogic(Logic logic) {
         this.logic = logic;
     }
 
