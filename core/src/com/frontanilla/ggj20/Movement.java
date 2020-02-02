@@ -2,21 +2,21 @@ package com.frontanilla.ggj20;
 
 import com.badlogic.gdx.math.Rectangle;
 
-public class Movement {
+class Movement {
 
     private Stuff stuff;
 
-    public void move(float x, float y){
+    void move(float x, float y) {
         Rectangle rectangle = stuff.getPlayer().getBounds();
         rectangle.x += x;
         rectangle.y += y;
     }
 
     void spacePressed() {
-
+        stuff.getPlayer().getVelocity().y = 100f;
     }
 
-    public void setStuff(Stuff stuff) {
+    void setStuff(Stuff stuff) {
         this.stuff = stuff;
     }
 }
