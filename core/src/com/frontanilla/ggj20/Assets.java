@@ -47,47 +47,47 @@ public class Assets {
     }
 
     //getter Hombre Lobo
-    public Texture getTail() {
+    Texture getTail() {
         return tail;
     }
 
-    public Texture getArmR() {
+    Texture getArmR() {
         return armR;
     }
 
-    public Texture getArmL() {
+    Texture getArmL() {
         return armL;
     }
 
-    public Texture getForearmR() {
+    Texture getForearmR() {
         return forearmR;
     }
 
-    public Texture getForearmL() {
+    Texture getForearmL() {
         return forearmL;
     }
 
-    public Texture getHead() {
+    Texture getHead() {
         return head;
     }
 
-    public Texture getBody() {
+    Texture getBody() {
         return body;
     }
 
-    public Texture getThightR() {
+    Texture getThightR() {
         return thightR;
     }
 
-    public Texture getThighL() {
+    Texture getThighL() {
         return thighL;
     }
 
-    public Texture getLegR() {
+    Texture getLegR() {
         return legR;
     }
 
-    public Texture getLegL() {
+    Texture getLegL() {
         return legL;
     }
 }

@@ -5,6 +5,7 @@ import com.badlogic.gdx.Gdx;
 
 public class SpaceshipGame extends Game {
 
+    @Override
     public void create() {
         Assets assets = new Assets();
         Logic logic = new Logic();

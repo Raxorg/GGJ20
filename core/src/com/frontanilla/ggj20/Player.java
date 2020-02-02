@@ -4,9 +4,11 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
+import java.util.ArrayList;
+
 class Player {
 
-    private Texture region;
+    private ArrayList<Texture> textures;
     private Rectangle bounds;
     private Vector2 velocity;
 
@@ -15,12 +17,12 @@ class Player {
         velocity = new Vector2();
     }
 
-    Texture getRegion() {
-        return region;
+    ArrayList<Texture> getTextures() {
+        return textures;
     }
 
-    void setRegion(Texture region) {
-        this.region = region;
+    void setTextures(ArrayList<Texture> textures) {
+        this.textures = textures;
     }
 
     Rectangle getBounds() {

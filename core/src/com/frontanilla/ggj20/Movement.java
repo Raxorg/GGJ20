@@ -8,6 +8,8 @@ class Movement {
     private Stuff stuff;
 
     void update(float delta) {
+        input.checkKeys();
+
         Player player = stuff.getPlayer();
         Rectangle playerBounds = player.getBounds();
 
@@ -29,10 +31,12 @@ class Movement {
     }
 
     void spacePressed() {
-        stuff.getPlayer().getVelocity().y = 1000f;
+        if (stuff.getPlayer().getBounds().y == 0f) {
+            stuff.getPlayer().getVelocity().y = 1000f;
+        }
     }
 
-    public void setInput(Input input) {
+    void setInput(Input input) {
         this.input = input;
     }
 
