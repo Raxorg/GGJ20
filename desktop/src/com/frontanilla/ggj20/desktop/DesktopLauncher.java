@@ -7,6 +7,10 @@ import com.frontanilla.ggj20.SpaceshipGame;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
+
+		config.width = 1400;
+		config.height = 700;
+
 		new LwjglApplication(new SpaceshipGame(), config);
 	}
 }
