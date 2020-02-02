@@ -1,19 +1,18 @@
 package com.frontanilla.ggj20;
 
-import java.awt.Rectangle;
+import com.badlogic.gdx.math.Rectangle;
 
 public class Movement {
 
     public Rectangle rectangle;
-    public int x;
-    public int y;
 
     public void Create(){
 
     }
 
-    public void move(int x, int y){
-        this.x = x;
-        this.y = y;
+    public void move(Rectangle rectangle, float x, float y){
+        rectangle.x += x;
+        rectangle.y += y;
     }
+
 }
