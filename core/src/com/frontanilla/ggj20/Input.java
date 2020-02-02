@@ -1,7 +1,6 @@
 package com.frontanilla.ggj20;
 
-import com.badlogic.gdx.Input.*;
-
+import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputAdapter;
 
 public class Input extends InputAdapter {
@@ -14,8 +13,8 @@ public class Input extends InputAdapter {
 
     @Override
     public boolean keyDown(int keycode) {
-        if (keycode == Keys.D) {
-            //game.moveRight();
+        if (keycode == Keys.SPACE) {
+
         }
         return true;
     }

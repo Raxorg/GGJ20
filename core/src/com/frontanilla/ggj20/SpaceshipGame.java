@@ -4,10 +4,8 @@ import com.badlogic.gdx.Game;
 
 public class SpaceshipGame extends Game {
 
-    int x;
-
-    @Override
     public void create() {
-        // HOLA NOOBS xxxxxxxxxx
+        setScreen(new Screen());
     }
+
 }
