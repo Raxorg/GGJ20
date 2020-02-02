@@ -36,7 +36,7 @@ public class Movement {
 
     public void spacePressed() {
         if (stuff.getPlayer().getBounds().y == 0f) {
-            stuff.getPlayer().getVelocity().y = 1000f;
+            stuff.getPlayer().getVelocity().y = 1400f;
         }
     }
 

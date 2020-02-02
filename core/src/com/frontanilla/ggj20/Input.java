@@ -12,9 +12,19 @@ public class Input extends InputAdapter {
     // Input
     private Vector3 unprojected;
 
-    public void init() {
+    void init() {
         unprojected = new Vector3();
         Gdx.input.setInputProcessor(this);
+    }
+
+    @Override
+    public boolean touchDown(int screenX, int screenY, int pointer, int button) {
+        if (pointer != 0) {
+            return false;
+        }
+        unprojected.set(screen.getCamera().unproject(new Vector3(screenX, screenY, 0f)));
+        logic.getAttack().attackButtonPressed();
+        return true;
     }
 
     @Override
@@ -27,10 +37,10 @@ public class Input extends InputAdapter {
 
     public void checkKeys() {
         if (Gdx.input.isKeyPressed(Keys.D)) {
-            logic.getMovement().move(200f, 0f);
+            logic.getMovement().move(300f, 0f);
         }
         if (Gdx.input.isKeyPressed(Keys.A)) {
-            logic.getMovement().move(-200f, 0f);
+            logic.getMovement().move(-300f, 0f);
         }
     }
 

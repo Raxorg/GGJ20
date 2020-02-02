@@ -1,5 +1,6 @@
 package com.frontanilla.ggj20;
 
+import com.frontanilla.ggj20.logic.Attack;
 import com.frontanilla.ggj20.logic.Collision;
 import com.frontanilla.ggj20.logic.Damage;
 import com.frontanilla.ggj20.logic.EnemyController;
@@ -8,6 +9,7 @@ import com.frontanilla.ggj20.logic.Poison;
 
 public class Logic {
 
+    private Attack attack;
     private Collision collision;
     private Damage damage;
     private EnemyController enemyController;
@@ -15,6 +17,7 @@ public class Logic {
     private Poison poison;
 
     Logic() {
+        attack = new Attack();
         collision = new Collision();
         damage = new Damage();
         enemyController = new EnemyController();
@@ -24,7 +27,7 @@ public class Logic {
         enemyController.setLogic(this);
     }
 
-    public void init() {
+    void init() {
         enemyController.init();
     }
 
@@ -45,6 +48,10 @@ public class Logic {
         enemyController.setStuff(stuff);
         movement.setStuff(stuff);
         poison.setStuff(stuff);
+    }
+
+    Attack getAttack() {
+        return attack;
     }
 
     public Damage getDamage() {
