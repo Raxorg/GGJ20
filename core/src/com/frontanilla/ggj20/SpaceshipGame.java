@@ -17,6 +17,6 @@ public class SpaceshipGame extends Game {
 
         setScreen(screen);
 
-        Gdx.input.setInputProcessor(new Input(this));
+        Gdx.input.setInputProcessor(new MyInput(this));
     }
 }

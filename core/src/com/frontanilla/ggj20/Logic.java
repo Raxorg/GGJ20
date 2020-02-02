@@ -17,4 +17,8 @@ class Logic {
     void setStuff(Stuff stuff) {
         this.stuff = stuff;
     }
+
+    public Movement getMovement() {
+        return movement;
+    }
 }
