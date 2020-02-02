@@ -4,7 +4,7 @@ import com.badlogic.gdx.ScreenAdapter;
 
 public class Screen extends ScreenAdapter {
 
-    Stuff stuff;
+    private Stuff stuff;
 
     @Override
     public void render(float delta) {
@@ -18,5 +18,9 @@ public class Screen extends ScreenAdapter {
 
     private void drawFrame() {
 
+    }
+
+    void setStuff(Stuff stuff) {
+        this.stuff = stuff;
     }
 }
