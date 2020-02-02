@@ -2,6 +2,7 @@ package com.frontanilla.ggj20;
 
 
 import com.badlogic.gdx.assets.AssetManager;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.Texture;
 
 import static com.badlogic.gdx.graphics.Texture.TextureFilter.Linear;
@@ -29,6 +30,8 @@ public class Assets {
     // Environment
     spaceship,
             ruinas;
+    // Audio
+    private Music weird;
 
     private AssetManager assetManager;
 
@@ -57,7 +60,8 @@ public class Assets {
         //Load Enviroment
         assetManager.load("spaceship.png", Texture.class);
         assetManager.load("Ruinas.png", Texture.class);
-
+        // Music
+        assetManager.load("audio/GameICantRemember.wav", Music.class);
 
         assetManager.finishLoading();
 
@@ -83,6 +87,8 @@ public class Assets {
         spaceship = assetManager.get("spaceship.png", Texture.class);
         spaceship.setFilter(Linear, Linear);
         ruinas = assetManager.get("Ruinas.png", Texture.class);
+        // Music
+        weird = assetManager.get("audio/GameICantRemember.wav", Music.class);
     }
 
     //get Enemies
@@ -152,5 +158,11 @@ public class Assets {
 
     public Texture getRuinas() {
         return ruinas;
+    }
+
+    // Get Audio
+
+    public Music getWeird() {
+        return weird;
     }
 }

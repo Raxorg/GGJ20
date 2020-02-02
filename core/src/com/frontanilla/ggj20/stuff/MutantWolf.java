@@ -7,6 +7,7 @@ public class MutantWolf {
 
     private Texture texture;
     private Rectangle bounds;
+    private boolean flipped;
 
     public MutantWolf() {
         bounds = new Rectangle();
@@ -22,5 +23,13 @@ public class MutantWolf {
 
     public Rectangle getBounds() {
         return bounds;
+    }
+
+    public boolean isFlipped() {
+        return flipped;
+    }
+
+    public void setFlipped(boolean flipped) {
+        this.flipped = flipped;
     }
 }

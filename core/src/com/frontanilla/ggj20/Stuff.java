@@ -22,7 +22,10 @@ public class Stuff {
     void init() {
         background = new SpaceshipBackground();
         background.setTexture(assets.getSpaceship());
-        background.getBounds().setSize(8000f, 1080f);
+        float ratio = 8000f / 1080f;
+        float h = 1000f;
+        float w = h * ratio;
+        background.getBounds().setSize(w, h);
 
         player = new Player();
         player.setTexture(assets.getPlayerMale());

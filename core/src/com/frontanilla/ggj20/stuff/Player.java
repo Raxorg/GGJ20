@@ -9,6 +9,7 @@ public class Player {
     private Texture texture;
     private Rectangle bounds;
     private Vector2 velocity;
+    private boolean flipped;
 
     public Player() {
         bounds = new Rectangle();
@@ -29,5 +30,13 @@ public class Player {
 
     public Vector2 getVelocity() {
         return velocity;
+    }
+
+    public boolean isFlipped() {
+        return flipped;
+    }
+
+    public void setFlipped(boolean flipped) {
+        this.flipped = flipped;
     }
 }

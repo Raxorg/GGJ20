@@ -10,12 +10,6 @@ public class EnemyController {
 
     private Logic logic;
     private Stuff stuff;
-    // Logic
-    private DelayedRemovalArray<MutantWolf> mutantWolvesOnCoolDown;
-
-    public void init() {
-        mutantWolvesOnCoolDown = new DelayedRemovalArray<>();
-    }
 
     public void update(float delta) {
         MutantWolf mutantWolf;
@@ -28,10 +22,10 @@ public class EnemyController {
             if (wolfPosition.dst(playerPosition) < 300f) {
                 float right = wolfPosition.x < playerPosition.x ? 1f : -1f;
                 mutantWolf.getBounds().x += 100f * delta * right;
+                mutantWolf.setFlipped(right == -1f);
                 if (wolfPosition.dst(playerPosition) < 10f &&
-                        !mutantWolvesOnCoolDown.contains(mutantWolf, true)) {
+                        logic.getDamage().isDamageable()) {
                     logic.getDamage().takeDamage(1);
-                    mutantWolvesOnCoolDown.add(mutantWolf);
                 }
             }
         }

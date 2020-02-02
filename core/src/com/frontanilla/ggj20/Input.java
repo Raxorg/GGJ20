@@ -30,17 +30,17 @@ public class Input extends InputAdapter {
     @Override
     public boolean keyDown(int keycode) {
         if (keycode == Keys.SPACE) {
-            logic.getMovement().spacePressed();
+            logic.getPlayerMovement().spacePressed();
         }
         return true;
     }
 
     public void checkKeys() {
         if (Gdx.input.isKeyPressed(Keys.D)) {
-            logic.getMovement().move(300f, 0f);
+            logic.getPlayerMovement().move(400f, 0f);
         }
         if (Gdx.input.isKeyPressed(Keys.A)) {
-            logic.getMovement().move(-300f, 0f);
+            logic.getPlayerMovement().move(-400f, 0f);
         }
     }
 

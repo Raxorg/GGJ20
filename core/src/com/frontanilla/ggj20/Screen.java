@@ -41,6 +41,7 @@ public class Screen extends ScreenAdapter {
         // Draw current frame
         batch.begin();
 
+        drawSpaceBackground();
         drawPlayer();
         drawHealthBar();
         drawMutantWolves();
@@ -48,12 +49,22 @@ public class Screen extends ScreenAdapter {
         batch.end();
     }
 
+    private void drawSpaceBackground() {
+        Rectangle bounds = stuff.getSpaceshipBackground().getBounds();
+        batch.draw(
+                stuff.getSpaceshipBackground().getTexture(),
+                bounds.x, bounds.y,
+                bounds.width, bounds.height);
+    }
+
     private void drawPlayer() {
         Rectangle bounds = stuff.getPlayer().getBounds();
         batch.draw(
                 stuff.getPlayer().getTexture(),
-                bounds.x, bounds.y,
-                bounds.width, bounds.height);
+                bounds.x, bounds.y, bounds.width, bounds.height, 0, 0,
+                stuff.getPlayer().getTexture().getWidth(),
+                stuff.getPlayer().getTexture().getHeight(),
+                stuff.getPlayer().isFlipped(), false);
     }
 
     private void drawHealthBar() {
@@ -72,8 +83,10 @@ public class Screen extends ScreenAdapter {
             bounds = stuff.getMutantWolves().get(i).getBounds();
             batch.draw(
                     stuff.getMutantWolves().get(i).getTexture(),
-                    bounds.x, bounds.y,
-                    bounds.width, bounds.height);
+                    bounds.x, bounds.y, bounds.width, bounds.height, 0, 0,
+                    stuff.getMutantWolves().get(i).getTexture().getWidth(),
+                    stuff.getMutantWolves().get(i).getTexture().getHeight(),
+                    stuff.getMutantWolves().get(i).isFlipped(), false);
         }
     }
 

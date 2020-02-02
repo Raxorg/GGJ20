@@ -15,7 +15,9 @@ public class SpaceshipGame extends Game {
 
         assets.loadAssets();
 
+        logic.setAssets(assets);
         logic.setInput(input);
+        logic.setScreen(screen);
         logic.setStuff(stuff);
 
         input.setLogic(logic);
