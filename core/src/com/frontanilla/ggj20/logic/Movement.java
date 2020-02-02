@@ -1,9 +1,10 @@
 package com.frontanilla.ggj20.logic;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Rectangle;
 import com.frontanilla.ggj20.Input;
-import com.frontanilla.ggj20.stuff.Player;
 import com.frontanilla.ggj20.Stuff;
+import com.frontanilla.ggj20.stuff.Player;
 
 public class Movement {
 
@@ -27,10 +28,10 @@ public class Movement {
         }
     }
 
-    public void move(float x, float y) {
+    public void move(float xSpeed, float ySpeed) {
         Rectangle rectangle = stuff.getPlayer().getBounds();
-        rectangle.x += x;
-        rectangle.y += y;
+        rectangle.x += xSpeed * Gdx.graphics.getDeltaTime();
+        rectangle.y += ySpeed * Gdx.graphics.getDeltaTime();
     }
 
     public void spacePressed() {

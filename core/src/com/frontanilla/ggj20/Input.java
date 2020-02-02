@@ -27,10 +27,10 @@ public class Input extends InputAdapter {
 
     public void checkKeys() {
         if (Gdx.input.isKeyPressed(Keys.D)) {
-            logic.getMovement().move(10f, 0f);
+            logic.getMovement().move(200f, 0f);
         }
         if (Gdx.input.isKeyPressed(Keys.A)) {
-            logic.getMovement().move(-10f, 0f);
+            logic.getMovement().move(-200f, 0f);
         }
     }
 

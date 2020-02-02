@@ -26,7 +26,8 @@ public class EnemyController {
             mutantWolf = stuff.getMutantWolves().get(i);
             mutantWolf.getBounds().getPosition(wolfPosition);
             if (wolfPosition.dst(playerPosition) < 300f) {
-                mutantWolf.getBounds().x -= 75f * delta;
+                float right = wolfPosition.x < playerPosition.x ? 1f : -1f;
+                mutantWolf.getBounds().x += 100f * delta * right;
                 if (wolfPosition.dst(playerPosition) < 10f &&
                         !mutantWolvesOnCoolDown.contains(mutantWolf, true)) {
                     logic.getDamage().takeDamage(1);

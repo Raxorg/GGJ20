@@ -4,6 +4,8 @@ package com.frontanilla.ggj20;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Texture;
 
+import static com.badlogic.gdx.graphics.Texture.TextureFilter.Linear;
+
 public class Assets {
 
     //Enemies
@@ -25,8 +27,8 @@ public class Assets {
     //HUD
     hp,
     // Environment
-    nave,
-    ruinas;
+    spaceship,
+            ruinas;
 
     private AssetManager assetManager;
 
@@ -53,9 +55,8 @@ public class Assets {
         //Load Hud
         assetManager.load("health.png", Texture.class);
         //Load Enviroment
-        assetManager.load("Nave.png", Texture.class);
+        assetManager.load("spaceship.png", Texture.class);
         assetManager.load("Ruinas.png", Texture.class);
-
 
 
         assetManager.finishLoading();
@@ -68,6 +69,7 @@ public class Assets {
         mutantWolf = assetManager.get("mutantWolf.png", Texture.class);
         //Get Jugador
         playerMale = assetManager.get("PlayerMale.png", Texture.class);
+        playerMale.setFilter(Linear, Linear);
         playerFemale = assetManager.get("PlayerFemale.png", Texture.class);
         arma1 = assetManager.get("M_Spear.png", Texture.class);
         arma2 = assetManager.get("M_Sword.png", Texture.class);
@@ -78,7 +80,8 @@ public class Assets {
         //Get hud
         hp = assetManager.get("health.png", Texture.class);
         //Enviroment
-        nave = assetManager.get("Nave.png", Texture.class);
+        spaceship = assetManager.get("spaceship.png", Texture.class);
+        spaceship.setFilter(Linear, Linear);
         ruinas = assetManager.get("Ruinas.png", Texture.class);
     }
 
@@ -143,8 +146,8 @@ public class Assets {
 
 
     //Get Enviroment
-    public Texture getNave() {
-        return nave;
+    public Texture getSpaceship() {
+        return spaceship;
     }
 
     public Texture getRuinas() {
