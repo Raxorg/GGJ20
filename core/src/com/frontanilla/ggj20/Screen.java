@@ -4,7 +4,9 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.Rectangle;
+import com.badlogic.gdx.math.Vector2;
+
+import static com.frontanilla.ggj20.Constants.LIVE_SIZE;
 
 public class Screen extends ScreenAdapter {
 
@@ -43,13 +45,12 @@ public class Screen extends ScreenAdapter {
     }
 
     private void drawHealthBar() {
-        Rectangle bounds;
-        for (int i = 0; i < stuff.getHealthPoints().size; i++) {
-            bounds = stuff.getHealthPoints().get(i).getBounds();
+        Vector2 position = stuff.getHealthBar().getPosition();
+        for (int i = 0; i < stuff.getHealthBar().getLives(); i++) {
             batch.draw(
-                    stuff.getHealthPoints().get(i).getTexture(),
-                    bounds.x, bounds.y,
-                    bounds.width, bounds.height);
+                    stuff.getHealthBar().getTexture(),
+                    position.x + LIVE_SIZE * i, position.y,
+                    LIVE_SIZE, LIVE_SIZE);
         }
     }
 
