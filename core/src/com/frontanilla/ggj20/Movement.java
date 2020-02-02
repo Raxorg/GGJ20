@@ -4,6 +4,7 @@ import com.badlogic.gdx.math.Rectangle;
 
 class Movement {
 
+    private Input input;
     private Stuff stuff;
 
     void update(float delta) {
@@ -29,6 +30,10 @@ class Movement {
 
     void spacePressed() {
         stuff.getPlayer().getVelocity().y = 1000f;
+    }
+
+    public void setInput(Input input) {
+        this.input = input;
     }
 
     void setStuff(Stuff stuff) {

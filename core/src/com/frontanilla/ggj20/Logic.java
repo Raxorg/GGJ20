@@ -12,6 +12,10 @@ class Logic {
         movement.update(delta);
     }
 
+    void setInput(Input input) {
+        movement.setInput(input);
+    }
+
     void setStuff(Stuff stuff) {
         movement.setStuff(stuff);
     }

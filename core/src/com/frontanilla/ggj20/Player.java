@@ -1,30 +1,33 @@
 package com.frontanilla.ggj20;
 
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
 class Player {
 
-    private TextureRegion region;
+    private Texture region;
     private Rectangle bounds;
     private Vector2 velocity;
 
-    Player(TextureRegion region) {
-        this.region = region;
+    Player() {
         bounds = new Rectangle();
         velocity = new Vector2();
     }
 
-    TextureRegion getRegion() {
+    Texture getRegion() {
         return region;
+    }
+
+    void setRegion(Texture region) {
+        this.region = region;
     }
 
     Rectangle getBounds() {
         return bounds;
     }
 
-    public Vector2 getVelocity() {
+    Vector2 getVelocity() {
         return velocity;
     }
 }
