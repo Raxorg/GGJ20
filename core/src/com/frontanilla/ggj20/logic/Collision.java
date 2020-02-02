@@ -6,6 +6,10 @@ public class Collision {
 
     private Stuff stuff;
 
+    public void update(float delta) {
+
+    }
+
     public void setStuff(Stuff stuff) {
         this.stuff = stuff;
     }
