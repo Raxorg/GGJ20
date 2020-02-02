@@ -22,7 +22,10 @@ public class Assets {
                     playerBag, //Dar la vuelta
                     playerJetpack, //Dar la vuelta
                     //HUD
-                    hp;
+                    hp,
+                    //Enviroment
+                    nave,
+                    ruinas;
 
     public AssetManager assetManager;
 
@@ -48,6 +51,10 @@ public class Assets {
         assetManager.load("PlayerMale.png", Texture.class);
         //Load Hud
         assetManager.load("health.png", Texture.class);
+        //Load Enviroment
+        assetManager.load("Nave.png", Texture.class);
+        assetManager.load("Ruinas.png", Texture.class);
+
 
 
         assetManager.finishLoading();
@@ -69,8 +76,12 @@ public class Assets {
         playerJetpack = assetManager.get("E_Jetpack.png", Texture.class);
         //Get hud
         hp = assetManager.get("health.png", Texture.class);
+        //Enviroment
+        nave = assetManager.get("Nave.png", Texture.class);
+        ruinas = assetManager.get("Ruinas.png", Texture.class);
     }
 
+    //get Enemies
     public Texture getHombreloboMutante() {
         return hombreloboMutante;
     }
@@ -91,6 +102,7 @@ public class Assets {
         return LoboMutante;
     }
 
+    //getPlayer
     public Texture getPlayerMale() {
         return playerMale;
     }
@@ -124,9 +136,17 @@ public class Assets {
     }
 
     //get HUD
-
-
     public Texture getHp() {
         return hp;
+    }
+
+
+    //Get Enviroment
+    public Texture getNave() {
+        return nave;
+    }
+
+    public Texture getRuinas() {
+        return ruinas;
     }
 }
