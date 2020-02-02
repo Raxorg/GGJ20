@@ -4,17 +4,17 @@ package com.frontanilla.ggj20;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Texture;
 
-public class Assets {
+class Assets {
 
-    public Texture tail, armR, armL, forearmR, forearmL, head, body, thightR, thighL, legR, legL;
+    private Texture tail, armR, armL, forearmR, forearmL, head, body, thightR, thighL, legR, legL;
 
-    public AssetManager assetManager;
+    private AssetManager assetManager;
 
-    public  Assets(){
+    Assets() {
         this.assetManager = new AssetManager();
     }
 
-    void loadAssets(){
+    void loadAssets() {
         //Load Hombre Lobo
         assetManager.load("hombreLobo/cola.png", Texture.class);
         assetManager.load("hombreLobo/antebrazoD.png", Texture.class);

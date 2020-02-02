@@ -19,7 +19,8 @@ public class Input extends InputAdapter {
     void checkKeys() {
         if (Gdx.input.isKeyPressed(Keys.D)) {
             logic.getMovement().move(10f, 0f);
-        } else if (Gdx.input.isKeyPressed(Keys.A)) {
+        }
+        if (Gdx.input.isKeyPressed(Keys.A)) {
             logic.getMovement().move(-10f, 0f);
         }
     }

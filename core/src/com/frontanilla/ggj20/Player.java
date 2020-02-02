@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 class Player {
 
-    private ArrayList<Texture> textures;
+    private Texture texture;
     private Rectangle bounds;
     private Vector2 velocity;
 
@@ -17,12 +17,12 @@ class Player {
         velocity = new Vector2();
     }
 
-    ArrayList<Texture> getTextures() {
-        return textures;
+    Texture getTexture() {
+        return texture;
     }
 
-    void setTextures(ArrayList<Texture> textures) {
-        this.textures = textures;
+    void setTexture(Texture texture) {
+        this.texture = texture;
     }
 
     Rectangle getBounds() {

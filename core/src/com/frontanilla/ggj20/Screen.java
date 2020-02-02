@@ -28,12 +28,10 @@ public class Screen extends ScreenAdapter {
 
         batch.begin();
 
-        for (int i = 0; i < stuff.getPlayer().getTextures().size(); i++) {
-            batch.draw(
-                    stuff.getPlayer().getTextures().get(i),
-                    stuff.getPlayer().getBounds().x,
-                    stuff.getPlayer().getBounds().y);
-        }
+        batch.draw(
+                stuff.getPlayer().getTexture(),
+                stuff.getPlayer().getBounds().x,
+                stuff.getPlayer().getBounds().y);
 
         batch.end();
     }
