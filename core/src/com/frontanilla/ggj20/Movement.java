@@ -6,6 +6,11 @@ class Movement {
 
     private Stuff stuff;
 
+    void update(float delta) {
+        stuff.getPlayer().getBounds().x += stuff.getPlayer().getVelocity().x * delta;
+        stuff.getPlayer().getBounds().y += stuff.getPlayer().getVelocity().y * delta;
+    }
+
     void move(float x, float y) {
         Rectangle rectangle = stuff.getPlayer().getBounds();
         rectangle.x += x;

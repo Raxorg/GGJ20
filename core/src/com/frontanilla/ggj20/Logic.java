@@ -8,11 +8,15 @@ class Logic {
         movement = new Movement();
     }
 
+    void update(float delta) {
+        movement.update(delta);
+    }
+
     void setStuff(Stuff stuff) {
         movement.setStuff(stuff);
     }
 
-    public Movement getMovement() {
+    Movement getMovement() {
         return movement;
     }
 }

@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class Screen extends ScreenAdapter {
 
+    private Logic logic;
     private Stuff stuff;
     // Rendering
     private SpriteBatch batch;
@@ -17,12 +18,8 @@ public class Screen extends ScreenAdapter {
 
     @Override
     public void render(float delta) {
-        update(delta);
+        logic.update(delta);
         drawFrame();
-    }
-
-    private void update(float delta) {
-
     }
 
     private void drawFrame() {
@@ -37,6 +34,10 @@ public class Screen extends ScreenAdapter {
                 stuff.getPlayer().getBounds().y);
 
         batch.end();
+    }
+
+    public void setLogic(Logic logic) {
+        this.logic = logic;
     }
 
     void setStuff(Stuff stuff) {
