@@ -1,6 +1,8 @@
 package com.frontanilla.ggj20;
 
-import com.frontanilla.ggj20.stuff.HealthBar;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.utils.DelayedRemovalArray;
+import com.frontanilla.ggj20.stuff.HealthPoint;
 import com.frontanilla.ggj20.stuff.Player;
 
 public class Stuff {
@@ -8,15 +10,18 @@ public class Stuff {
     private Assets assets;
     // Stuff
     private Player player;
-    private HealthBar healthBar;
+    private DelayedRemovalArray<HealthPoint> healthPoints;
 
     void init() {
         player = new Player();
         player.setTexture(assets.getIndigena());
 
-        healthBar = new HealthBar();
-        healthBar.setFrame(null);
-        healthBar.setHealth(null);
+        healthPoints = new DelayedRemovalArray<>();
+
+        HealthPoint hp1 = new HealthPoint();
+        hp1.setTexture(assets.getIndigenaMutante());
+        hp1.getBounds().set(0, Gdx.graphics.getHeight() - 100f, 100f, 100f);
+        healthPoints.add(hp1);
     }
 
     void setAssets(Assets assets) {
@@ -29,7 +34,7 @@ public class Stuff {
         return player;
     }
 
-    public HealthBar getHealthBar() {
-        return healthBar;
+    public DelayedRemovalArray<HealthPoint> getHealthPoints() {
+        return healthPoints;
     }
 }
