@@ -1,14 +1,17 @@
 package com.frontanilla.ggj20;
 
-public class Stuff {
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
+
+class Stuff {
 
     private Player player;
 
     void init() {
-        player = new Player();
+        player = new Player(new TextureRegion(new Texture("badlogic.jpg")));
     }
 
-    public Player getPlayer() {
+    Player getPlayer() {
         return player;
     }
 }

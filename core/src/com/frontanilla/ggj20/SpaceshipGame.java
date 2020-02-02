@@ -11,6 +11,6 @@ public class SpaceshipGame extends Game {
         stuff.init();
         screen.setStuff(stuff);
 
-        setScreen(new Screen());
+        setScreen(screen);
     }
 }
