@@ -8,6 +8,10 @@ public class MutantWolf {
     private Texture texture;
     private Rectangle bounds;
 
+    public MutantWolf() {
+        bounds = new Rectangle();
+    }
+
     public Texture getTexture() {
         return texture;
     }
@@ -18,9 +22,5 @@ public class MutantWolf {
 
     public Rectangle getBounds() {
         return bounds;
-    }
-
-    public void setBounds(Rectangle bounds) {
-        this.bounds = bounds;
     }
 }

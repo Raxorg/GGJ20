@@ -6,40 +6,41 @@ import com.badlogic.gdx.graphics.Texture;
 
 public class Assets {
 
-    public Texture  //Enemies
-                    hombreloboMutante,
-                   indigena,
-                   lanzaIndigena,
-                   indigenaMutante,
-                   LoboMutante,
-                    //Player
-                   playerMale,
-                   playerFemale,
-                    arma1,
-                    arma2,
-                    arma3,
-                    arma4,
-                    playerBag, //Dar la vuelta
-                    playerJetpack, //Dar la vuelta
-                    //HUD
-                    hp,
-                    //Enviroment
-                    nave,
-                    ruinas;
+    //Enemies
+    private Texture
+            hombreloboMutante,
+            indigena,
+            lanzaIndigena,
+            indigenaMutante,
+            mutantWolf,
+    //Player
+    playerMale,
+            playerFemale,
+            arma1,
+            arma2,
+            arma3,
+            arma4,
+            playerBag, //Dar la vuelta
+            playerJetpack, //Dar la vuelta
+    //HUD
+    hp,
+    // Environment
+    nave,
+    ruinas;
 
-    public AssetManager assetManager;
+    private AssetManager assetManager;
 
-    public  Assets(){
+    Assets() {
         this.assetManager = new AssetManager();
     }
 
-    void loadAssets(){
+    void loadAssets() {
         //Load Enemies
         assetManager.load("hombreLoboMutante.png", Texture.class);
         assetManager.load("indigena.png", Texture.class);
         assetManager.load("lanza.png", Texture.class);
         assetManager.load("indigenaMutante.png", Texture.class);
-        assetManager.load("LoboMutante.png", Texture.class);
+        assetManager.load("mutantWolf.png", Texture.class);
         //Load Player
         assetManager.load("E_Bag.png", Texture.class);
         assetManager.load("E_Jetpack.png", Texture.class);
@@ -64,7 +65,7 @@ public class Assets {
         indigena = assetManager.get("indigena.png", Texture.class);
         lanzaIndigena = assetManager.get("lanza.png", Texture.class);
         indigenaMutante = assetManager.get("indigenaMutante.png", Texture.class);
-        LoboMutante = assetManager.get("LoboMutante.png", Texture.class);
+        mutantWolf = assetManager.get("mutantWolf.png", Texture.class);
         //Get Jugador
         playerMale = assetManager.get("PlayerMale.png", Texture.class);
         playerFemale = assetManager.get("PlayerFemale.png", Texture.class);
@@ -98,8 +99,8 @@ public class Assets {
         return indigenaMutante;
     }
 
-    public Texture getLoboMutante() {
-        return LoboMutante;
+    public Texture getMutantWolf() {
+        return mutantWolf;
     }
 
     //getPlayer

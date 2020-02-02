@@ -84,4 +84,8 @@ public class Screen extends ScreenAdapter {
     void setStuff(Stuff stuff) {
         this.stuff = stuff;
     }
+
+    public OrthographicCamera getCamera() {
+        return camera;
+    }
 }

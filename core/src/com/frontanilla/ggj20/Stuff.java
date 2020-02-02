@@ -19,15 +19,19 @@ public class Stuff {
 
     void init() {
         player = new Player();
-        player.setTexture(assets.getIndigena()); // TODO: Get Player Male
+        player.setTexture(assets.getPlayerMale());
         player.getBounds().setSize(121f / 2f, 416f / 2f);
 
         healthBar = new HealthBar();
-        healthBar.setTexture(assets.getIndigena()); // TODO: Get health
+        healthBar.setTexture(assets.getHp());
         healthBar.getPosition().set(0, CAMERA_HEIGHT - LIVE_SIZE);
         healthBar.setLives(3);
 
         mutantWolves = new DelayedRemovalArray<>();
+        MutantWolf mutantWolf = new MutantWolf();
+        mutantWolf.setTexture(assets.getMutantWolf());
+        mutantWolf.getBounds().set(700f, 0f, 333f / 2f, 293f / 2f);
+        mutantWolves.add(mutantWolf);
     }
 
     void setAssets(Assets assets) {

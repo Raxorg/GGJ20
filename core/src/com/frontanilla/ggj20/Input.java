@@ -3,10 +3,19 @@ package com.frontanilla.ggj20;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputAdapter;
+import com.badlogic.gdx.math.Vector3;
 
 public class Input extends InputAdapter {
 
     private Logic logic;
+    private Screen screen;
+    // Input
+    private Vector3 unprojected;
+
+    public void init() {
+        unprojected = new Vector3();
+        Gdx.input.setInputProcessor(this);
+    }
 
     @Override
     public boolean keyDown(int keycode) {
@@ -27,5 +36,9 @@ public class Input extends InputAdapter {
 
     void setLogic(Logic logic) {
         this.logic = logic;
+    }
+
+    void setScreen(Screen screen) {
+        this.screen = screen;
     }
 }

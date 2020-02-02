@@ -19,16 +19,17 @@ public class SpaceshipGame extends Game {
         logic.setStuff(stuff);
 
         input.setLogic(logic);
+        input.setScreen(screen);
 
         screen.setLogic(logic);
         screen.setStuff(stuff);
 
         stuff.setAssets(assets);
 
+        input.init();
         stuff.init();
+        logic.init();
 
         setScreen(screen);
-
-        Gdx.input.setInputProcessor(input);
     }
 }
