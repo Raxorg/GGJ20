@@ -63,8 +63,8 @@ public class Assets {
         playerFemale = assetManager.get("PlayerFemale.png", Texture.class);
         arma1 = assetManager.get("M_Spear.png", Texture.class);
         arma2 = assetManager.get("M_Sword.png", Texture.class);
-        arma3 = assetManager.get("M_Sword2", Texture.class);
-        arma4 = assetManager.get("M_Sword3", Texture.class);
+        arma3 = assetManager.get("M_Sword2.png", Texture.class);
+        arma4 = assetManager.get("M_Sword3.png", Texture.class);
         playerBag = assetManager.get("E_Bag.png", Texture.class);
         playerJetpack = assetManager.get("E_Jetpack.png", Texture.class);
         //Get hud
