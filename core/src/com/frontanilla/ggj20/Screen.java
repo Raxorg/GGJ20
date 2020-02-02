@@ -29,7 +29,7 @@ public class Screen extends ScreenAdapter {
         batch.begin();
 
         batch.draw(
-                stuff.getPlayer().getRegion(),
+                stuff.getPlayer().getTexture(),
                 stuff.getPlayer().getBounds().x,
                 stuff.getPlayer().getBounds().y);
 
